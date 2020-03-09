@@ -1,0 +1,26 @@
+
+<div class="form-group">
+          <input type="text" class="form-control"  [(ngModel)]="searchString"
+           name="search" autocomplete="off" placeholder="&#61442;  Start searching for a products by UPC or Product Short Name, Brand Name, Shelf Level">
+        </div>
+  <!-- <input class="form-control" type="text" name="search" [(ngModel)]="searchString" autocomplete="off" placeholder="&#61442;  Start searching for a hero by id or name or country"> -->
+  	<table class="table table-striped">
+  	  <thead>
+  	     <tr>
+  	      <th scope="col" sortable="column" (sort)="onSort($event)" *ngFor="let column of displayedColumns" >{{column}}</th>
+  	     </tr>
+  	  </thead>
+  	  <tbody>
+  	    <tr *ngFor="let element of dataSource | filter:searchString | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+  	      <td>{{element.upc}}</td>
+  	      <td>{{element.productShortName}}</td>
+  	      <td>{{element.brandName}}</td>
+          <td>{{element.shelfLevel}}</td>
+  	    </tr>
+  	  </tbody>
+		</table>
+		<div class="d-flex justify-content-between right p-2">
+				<ngb-pagination [pageSize] = "5" [collectionSize]="80" [(page)]="page" 
+				[maxSize]="5" [rotate]="true" [ellipses]="false" [boundaryLinks]="true">
+				</ngb-pagination>
+			</div>

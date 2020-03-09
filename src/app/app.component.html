@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="header">
+    <div class="header-text">Retail Analysis Of Products</div>
+  </div>
+  <div class="text-title  mt-5">Detected products in the shelf</div>
+  <div class="card mt-2 mb-5">
+    <app-display-table></app-display-table>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="text-title mb-2">Brand share doughnut chart for top 5 brands </div>
+      <app-pie-chart></app-pie-chart>
+    </div>
+  </div>
+  <div class="row mt-3 mb-4">
+    <div class="col">
+      <div class="text-title"> Analyse distincts brands using horizontal bar chart</div>
+      <app-shelf-bar-graph></app-shelf-bar-graph>
+    </div>
+  </div>
+  <div class="text-title mt-5">Image Recogization</div>
+  <div class="cont d-flex justify-content-center align-items-center flex-column">
+    <div class="custom-file">
+      <input type="file" class="custom-file-input" (change)="fileChange($event)">
+      <label class="custom-file-label">Choose file</label>
+    </div>
+    <div *ngIf="loading; else elseBlock">
+      <img src="./assets/loading.gif">
+    </div>
+    <ng-template #elseBlock>
+      <canvas id="canvas">
+        <img [src]="imageSrc" #img *ngIf="imageSrc" />
+      </canvas>
+    </ng-template>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+
+<form [formGroup]="brandForm">
+  <div class="group-gap">
+    <div class="d-block my-3">
+  
+    <div class="mb-3">
+      <select class="custom-select" (change)="changeBrand($event)" formControlName="brandName">
+        <option value="">Choose your brand</option>
+        <option *ngFor="let item of brands" [ngValue]="item">{{item}}</option>
+      </select>
+    </div>            
+  
+    </div>
+  </div>
+</form>
+<div *ngIf="isValueSelected">
+  <ngx-charts-bar-horizontal style="width: 50vw; height: 50vh;"
+    [view]="view"
+    [scheme]="colorScheme"
+    [results]="brandShelf"
+    [gradient]="gradient"
+    [xAxis]="showXAxis"
+    [yAxis]="showYAxis"
+    [legend]="showLegend"
+    [showXAxisLabel]="showXAxisLabel"
+    [showYAxisLabel]="showYAxisLabel"
+    [xAxisLabel]="xAxisLabel"
+    [yAxisLabel]="yAxisLabel"
+    (select)="onSelect($event)"
+    (activate)="onActivate($event)"
+    (deactivate)="onDeactivate($event)">
+  </ngx-charts-bar-horizontal>
+</div>
