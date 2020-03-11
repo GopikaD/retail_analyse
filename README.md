@@ -8,17 +8,17 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Steps to run project
 Prior to running application install visual code in your machine.
-1. Install latest version of Node.js
+1. Install 8.11.3 version of Node.js 
 2. Open command prompt
 3. Install angular cli globaly using npm install -g @angular/cli
 4. create new folder 
-5. In the command prompt cd foldername (new folder created)
+5. In the command prompt run cmd -> cd foldername (new folder created)
 6. cmd - git clone https://github.com/GopikaD/retail_analyse.git
 7. cmd - code . (code will open in visual code )
-8. open visual code terminal and run cmd cd retail_analyse
+8. open visual code terminal and run cmd -> cd retail_analyse
 8. If package-lock.json file is available in the folder please delete it.
-9. install node_modules using cmd - npm install
-10. to run application - cmd- ng serve
+9. install node_modules using cmd -> npm install
+10. to run application - cmd -> ng serve
 
 
 ## Build
