@@ -27,7 +27,7 @@
     "@tensorflow-models/coco-ssd": "^0.1.1",
     "@tensorflow/tfjs": "^0.13.5",
     "core-js": "^2.5.4",
-    "highcharts": "^6.0.1",
+    "highcharts": "^9.0.0",
     "ng2-search-filter": "0.4.7",
     "rxjs": "6.0.0",
     "rxjs-compat": "6.0.0",
